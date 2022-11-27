@@ -12,8 +12,8 @@
                         <span style="color: red;">[{{ error }}]</span>
                         {% endfor %}
                 </p>
+                <p>{{ form.submit() }}</p>
         </form>
-        <p>{{ form.submit() }}</p>
         {% endif %}
         {% for post in posts %}
                 {% include '_post.html' %}
