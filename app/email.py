@@ -7,6 +7,7 @@ def send_email(subject, sender, recipients, text_body, html_body):
     msg.body = text_body
     msg.html = html_body
     mail.send(msg)
+    app.logger.info('Sent mail with subject {}'.format(subject))
 
 def send_password_reset_email(user):
     token = user.get_reset_password_token()
