@@ -1,4 +1,4 @@
-{% extends 'bs_base.html' %}
+{% extends "bs_base.html" %}
 
     {% block title %}
         {% if title %}{{ title }} - Trakr{% else %}Welcome to Trakr{% endif %}
@@ -46,7 +46,7 @@
             {% endif %}
             {% endwith %}
             
-            {# application content needs to e provided in the app_content block #}
+            {# application content needs to be provided in the app_content block #}
             {% block app_content %}{% endblock %}
         </div>
 
