@@ -3,7 +3,7 @@ from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-from flask import Flask
+from flask import Flask, request
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -11,6 +11,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap4
 from flask_moment import Moment
+from flask_babel import Babel
 
 from werkzeug.debug import DebuggedApplication
 
@@ -21,6 +22,7 @@ migrate = Migrate(app, db)
 mail = Mail(app)
 bootstrap = Bootstrap4(app)
 moment = Moment(app)
+babel = Babel(app)
 
 # app.debug = True
 # app.wsgi_app = DebuggedApplication(app.wsgi_app, True)
@@ -54,5 +56,9 @@ if not app.debug:
 
     app.logger.setLevel(logging.INFO)
     app.logger.info('Trakr Startup')
+
+@babel.localeselector
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 from app import routes, models, errors
