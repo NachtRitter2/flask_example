@@ -8,7 +8,12 @@
             <td>
                 <a href="{{ url_for('user', username=post.author.username) }}">
                     {{ post.author.username }}
-                </a> says:<br />
+                </a> said
+                {% if datetime.utcnow() > post.timestamp+timedelta(days=1) %}
+                on {{ moment(post.timestamp).format('LLL') }}
+                {% else %}
+                {{ moment(post.timestamp).fromNow() }}
+                {% endif %} <br />
                 <blockquote class="blockquote">
                     <p class="mb-0">{{ post.body }}</p>
                 </blockquote>
