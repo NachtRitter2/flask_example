@@ -10,9 +10,7 @@
             <!-- Bootstrap CSS -->
             {{ bootstrap.load_css() }}
         {% endblock %}
-        {% block title %}
-            {% if title %}{{ title }} - Trakr{% else %}Welcome to Trakr{% endif %}
-        {% endblock %}
+        <title>{% block title %}{% endblock %}</title>
         <!-- End Head block -->
         {% endblock %}
     </head>
