@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-11-30 23:05-0800\n"
-"PO-Revision-Date: 2022-11-30 23:07-0800\n"
+"POT-Creation-Date: 2022-11-30 23:24-0800\n"
+"PO-Revision-Date: 2022-11-30 23:25-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
 "Language-Team: de <LL@li.org>\n"
@@ -140,6 +140,18 @@ msgstr ""
 msgid "You are no longer following %(username)s!"
 msgstr ""
 
+#: app/templates/500.html:4
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app/templates/500.html:5
+msgid "The administrator had been notified. Sorry for the inconvenience!"
+msgstr ""
+
+#: app/templates/500.html:6
+msgid "Back"
+msgstr ""
+
 #: app/templates/_post.html:15
 #, python-format
 msgid "%(username)s said %(when)s"
@@ -187,7 +199,8 @@ msgid "User: %(username)s"
 msgstr ""
 
 #: app/templates/user.html:14
-msgid "Last seen on:  %(when)"
+#, python-format
+msgid "Last seen on:  %(when)s"
 msgstr ""
 
 #: app/templates/user.html:16
