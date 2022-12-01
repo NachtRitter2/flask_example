@@ -11,7 +11,7 @@ from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap4
 from flask_moment import Moment
-from flask_babel import Babel
+from flask_babel import Babel, lazy_gettext as _l
 
 from werkzeug.debug import DebuggedApplication
 
@@ -29,6 +29,7 @@ babel = Babel(app)
 
 login = LoginManager(app)
 login.login_view = 'login'
+login.login_message = _l('Please log in to access this page.')
 
 if not app.debug:
     if app.config['MAIL_SERVER']:

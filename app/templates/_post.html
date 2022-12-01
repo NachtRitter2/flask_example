@@ -6,10 +6,14 @@
                 </a>
             </td>
             <td>
-                <a href="{{ url_for('user', username=post.author.username) }}">
-                    {{ post.author.username }}
-                </a> said
-                {{ moment(post.timestamp).fromNow() }}<br />
+                {% set user_link %}
+
+                    <a href="{{ url_for('user', username=post.author.username) }}">
+                        {{ post.author.username }}
+                    </a> 
+                {% endset %} 
+                {{ _('%(username)s said %(when)s', 
+                    username=user_link, when=moment(post.timestamp).fromNow()) }}<br />
                 <blockquote class="blockquote">
                     <p class="mb-0">{{ post.body }}</p>
                 </blockquote>
