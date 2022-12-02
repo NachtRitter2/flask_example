@@ -25,7 +25,7 @@ msgstr "Por favor ingrese para acceder a esta página."
 #: app/email.py:20
 #, fuzzy
 msgid "[Trakr] Reset Your Password"
-msgstr "Nueva Contraseña"
+msgstr "[Trakr] Nueva Contraseña"
 
 #: app/forms.py:8 app/forms.py:14 app/forms.py:32
 msgid "Username"
@@ -267,9 +267,6 @@ msgstr ""
 #: app/templates/email/reset_password.html:12
 msgid "The Trakr Website"
 msgstr ""
-
-#~ msgid "[Microblog] Reset Your Password"
-#~ msgstr "[Microblog] Nueva Contraseña"
 
 #~ msgid "Search"
 #~ msgstr "Buscar"
