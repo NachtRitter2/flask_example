@@ -20,11 +20,11 @@ msgstr ""
 
 #: app/__init__.py:32
 msgid "Please log in to access this page."
-msgstr ""
+msgstr "Bitte loggen Sie sich ein, um diese seite zu benutzen."
 
 #: app/email.py:20
 msgid "[Trakr] Reset Your Password"
-msgstr ""
+msgstr "[Trakr] Setz dein Passwort züruck"
 
 #: app/forms.py:8 app/forms.py:14 app/forms.py:32
 msgid "Username"
@@ -36,7 +36,7 @@ msgstr "Passwort"
 
 #: app/forms.py:10
 msgid "Remember Me"
-msgstr ""
+msgstr "Erinnere Mich"
 
 #: app/forms.py:11 app/routes.py:63 app/templates/login.html:5
 msgid "Sign In"
@@ -54,25 +54,21 @@ msgstr "Passwort Wiederholen"
 msgid "Register"
 msgstr "Registrieren"
 
-#: app/forms.py:24
+#: app/forms.py:24 app/forms.py:44
 msgid "Please use a different username."
-msgstr ""
+msgstr "Bitte einen anderen Benutzernamen verwenden."
 
 #: app/forms.py:29
 msgid "Please use a different email address."
-msgstr ""
+msgstr "Bitte einen anderen Email verwenden."
 
 #: app/forms.py:33
 msgid "About me"
-msgstr ""
+msgstr "Über mich"
 
 #: app/forms.py:34 app/forms.py:49 app/forms.py:61
 msgid "Submit"
 msgstr "Absenden"
-
-#: app/forms.py:44
-msgid "Please use a different name."
-msgstr ""
 
 #: app/forms.py:47
 msgid "Say something"
@@ -80,15 +76,15 @@ msgstr "Sag etwas"
 
 #: app/forms.py:53 app/forms.py:58
 msgid "Request Password Reset"
-msgstr ""
+msgstr "Passwort Zurücksetzen Anfordern"
 
 #: app/routes.py:29
 msgid "Your post is now live!"
-msgstr ""
+msgstr "Ihre Kommentar is jetzt gestellt!H"
 
 #: app/routes.py:35 app/templates/base.html:14
 msgid "Home"
-msgstr "Heim"
+msgstr "Startseite"
 
 #: app/routes.py:45 app/templates/base.html:15
 msgid "Explore"
@@ -108,7 +104,7 @@ msgstr "Passwort Zürucksetzen"
 
 #: app/routes.py:90
 msgid "Your password has been reset."
-msgstr ""
+msgstr "Dein Passwort war Züruckgesetzt."
 
 #: app/routes.py:109
 msgid "Congratulations, you are now a registered user!"
@@ -116,11 +112,11 @@ msgstr ""
 
 #: app/routes.py:133
 msgid "Your changes have been saved."
-msgstr ""
+msgstr "Ihre Änderungen wurden gespeichert."
 
 #: app/routes.py:138 app/templates/edit_profile.html:5
 msgid "Edit Profile"
-msgstr ""
+msgstr "Profil bearbeiten"
 
 #: app/routes.py:149 app/routes.py:168
 #, python-format
@@ -154,16 +150,16 @@ msgstr ""
 
 #: app/templates/404.html:5 app/templates/500.html:6
 msgid "Back"
-msgstr "Zuruck"
+msgstr "Züruck"
 
 #: app/templates/_post.html:15
 #, python-format
 msgid "%(username)s said %(when)s"
-msgstr ""
+msgstr "%(username)s sagte %(when)s"
 
 #: app/templates/base.html:5
 msgid "Welcome to Trakr"
-msgstr ""
+msgstr "Welkommen zu Trakr"
 
 #: app/templates/base.html:19
 msgid "Login"
@@ -183,7 +179,7 @@ msgstr "Neuer Benutzer?"
 
 #: app/templates/login.html:14
 msgid "Click to Register!"
-msgstr ""
+msgstr "Hier klicken um sich zu registrieren!"
 
 #: app/templates/login.html:17
 msgid "Forgot Your Password?"
@@ -205,7 +201,7 @@ msgstr "Nutzer: %(username)s"
 #: app/templates/user.html:14
 #, python-format
 msgid "Last seen on:  %(when)s"
-msgstr ""
+msgstr "Zuletzt gesehen am:  %(when)s"
 
 #: app/templates/user.html:16
 #, python-format
