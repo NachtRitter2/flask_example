@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-01 22:58-0800\n"
+"POT-Creation-Date: 2022-12-02 00:30-0800\n"
 "PO-Revision-Date: 2022-11-30 23:25-0800\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -151,10 +151,6 @@ msgstr ""
 #: app/templates/500.html:5
 msgid "The administrator had been notified. Sorry for the inconvenience!"
 msgstr ""
-
-#: app/templates/404.html:5 app/templates/500.html:6
-msgid "Back"
-msgstr "Züruck"
 
 #: app/templates/_post.html:15
 #, python-format

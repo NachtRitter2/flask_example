@@ -3,10 +3,10 @@ import click
 from app import app
 from flask.cli import AppGroup
 
-translate = AppGroup('translate')
-def translate():
-    """Translation and localization commands."""
-    pass
+translate = AppGroup('translate', short_help="Translation and localization")
+#def translate():
+#    """Translation and localization commands."""
+#    pass
 
 @translate.command('init')
 @click.argument('lang')
@@ -33,4 +33,4 @@ def compile():
     if os.system('pybabel compile -d app/translations'):
         raise RuntimeError('compile command failed')
 
-
+app.cli.add_command(translate)

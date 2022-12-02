@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-01 22:58-0800\n"
+"POT-Creation-Date: 2022-12-02 00:30-0800\n"
 "PO-Revision-Date: 2017-09-29 23:25-0700\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -55,7 +55,7 @@ msgstr "Repetir Contraseña"
 msgid "Register"
 msgstr "Registrarse"
 
-#: app/forms.py:24
+#: app/forms.py:24 app/forms.py:44
 msgid "Please use a different username."
 msgstr "Por favor use un nombre de usuario diferente."
 
@@ -70,11 +70,6 @@ msgstr "Acerca de mí"
 #: app/forms.py:34 app/forms.py:49 app/forms.py:61
 msgid "Submit"
 msgstr "Enviar"
-
-#: app/forms.py:44
-#, fuzzy
-msgid "Please use a different name."
-msgstr "Por favor use un nombre de usuario diferente."
 
 #: app/forms.py:47
 msgid "Say something"
@@ -237,7 +232,7 @@ msgid "Unfollow"
 msgstr "Dejar de seguir"
 
 #: app/templates/email/reset_password.html:1
-#, fuzzy, python-format
+#, fuzzy
 msgid "Dear %(username)"
 msgstr "¡Hola, %(username)s!"
 
@@ -297,4 +292,7 @@ msgstr ""
 
 #~ msgid "%(count)d following"
 #~ msgstr "siguiendo a %(count)d"
+
+#~ msgid "Please use a different name."
+#~ msgstr "Por favor use un nombre de usuario diferente."
 
