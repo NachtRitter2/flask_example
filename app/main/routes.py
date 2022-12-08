@@ -1,4 +1,5 @@
-from flask import (render_template, flash, redirect, request, url_for, jsonify, g)
+from flask import (render_template, flash, redirect, request, url_for, 
+    jsonify, g, current_app)
 from flask_login import (current_user, login_required)
 from flask_babel import (_, get_locale)
 from datetime import datetime
@@ -35,7 +36,7 @@ def index():
         return redirect(url_for('main.index'))
     page = request.args.get('page', 1, type=int)
     pagination = current_user.followed_posts().paginate(
-        page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+        page=page, per_page=current_app.config['POSTS_PER_PAGE'], error_out=False)
     posts = pagination.items
     return render_template('index.html', title=_('Home'), form=form, 
         posts=posts, pagination=pagination)
@@ -45,7 +46,7 @@ def index():
 def explore():
     page = request.args.get('page', 1, type=int)
     pagination = Post.query.order_by(Post.timestamp.desc()).paginate(
-        page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+        page=page, per_page=current_app.config['POSTS_PER_PAGE'], error_out=False)
     posts = pagination.items
     return render_template('index.html', title=_('Explore'), posts=posts,
                pagination=pagination) 
@@ -56,7 +57,7 @@ def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
     pagination = user.posts.order_by(Post.timestamp.desc()).paginate(
-        page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+        page=page, per_page=current_app.config['POSTS_PER_PAGE'], error_out=False)
     posts = pagination.items
     form = EmptyForm()
     return render_template('user.html', user=user, posts=posts, form=form,
