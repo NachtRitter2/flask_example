@@ -8,22 +8,22 @@
     {% block navbar %}
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="navbar-brand">
-            {{ render_nav_item('index', 'Trakr') }}
+            {{ render_nav_item('main.index', 'Trakr') }}
             </div>
             <div class="navbar-nav mr-auto">
-                {{ render_nav_item('index', _('Home')) }}
-                {{ render_nav_item('explore', _('Explore')) }}
+                {{ render_nav_item('main.index', _('Home')) }}
+                {{ render_nav_item('main.explore', _('Explore')) }}
             </div>
             <div class="navbar-nav mr-auto navbar-right">
                 {% if current_user.is_anonymous %}
-                {{ render_nav_item('login', _('Login')) }}
+                {{ render_nav_item('auth.login', _('Login')) }}
                 {% else %}
-                {% set active = True if request.path == url_for('user', username=current_user.username) else False %}
+                {% set active = True if request.path == url_for('main.user', username=current_user.username) else False %}
                 <a class="nav-item nav-link {% if active %} active" aria-current="page{% endif %}"
-                        href="{{ url_for('user', username=current_user.username) }}">
+                        href="{{ url_for('main.user', username=current_user.username) }}">
                 {{ _('Profile') }}
                 </a>
-                {{ render_nav_item('logout', _('Logout')) }}
+                {{ render_nav_item('auth.logout', _('Logout')) }}
                 {% endif %}
 
             </div>
