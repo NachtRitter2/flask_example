@@ -24,10 +24,6 @@ login = LoginManager()
 login.login_view = 'auth.login'
 login.login_message = _l('Please log in to access this page.')
 
-
-# app.debug = True
-# app.wsgi_app = DebuggedApplication(app.wsgi_app, True)
-
 def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
@@ -49,6 +45,8 @@ def create_app(config_class=Config):
     from app.main import bp as main_bp
     app.register_blueprint(main_bp)
 
+    app.debug = True
+    app.wsgi_app = DebuggedApplication(app.wsgi_app, True)
 
     if not app.debug and not app.testing:
         if app.config['MAIL_SERVER']:
